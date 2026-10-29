@@ -16,7 +16,6 @@ public class Shoot  : MonoBehaviour
         }
     }
 
-
     private void ShootLogic()
     {
         GameObject ShootPrefabs = Instantiate(ShootPrefab, ShootPosition.position, Quaternion.identity);
@@ -24,5 +23,8 @@ public class Shoot  : MonoBehaviour
         rb.AddForce(ShootPosition.up * ShootForce, ForceMode2D.Force);
         Destroy(ShootPrefabs, 5f);
     }
+
+
+    
 }
 
