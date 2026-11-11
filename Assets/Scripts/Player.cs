@@ -20,8 +20,10 @@ public class Player : MonoBehaviour
     private void MoveLogic()
     {
         float moveH = Input.GetAxis("Horizontal");
-        float moveV = Input.GetAxis("Vertical");
+        //float moveV = Input.GetAxis("Vertical");
 
-        rb.linearVelocity = new Vector2(moveH * moveSpeed, moveV * moveSpeed);
+        rb.linearVelocity = new Vector2(moveH * moveSpeed, 0);
     }
+
+    
 }
