@@ -14,7 +14,6 @@ public class ShootPrefab : MonoBehaviour
             Destroy(hitEffectInstance, 1f);
 
             GameManager.score++;
-            print("added score");
             Destroy(other.gameObject);
         }
     }

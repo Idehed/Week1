@@ -14,7 +14,7 @@ public class Shoot  : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if(ShootCount >=10)
+            if(ShootCount >=15)
             {
                 print("No more shots left");
                 return;
@@ -34,8 +34,10 @@ public class Shoot  : MonoBehaviour
     }
     private void OnGUI()
     {
+        GUIStyle style = new GUIStyle();
+        style.normal.textColor = Color.red;
         GUI.color = Color.white;
-        GUI.Label(r2, $"Shots Left: {10 - ShootCount}");
+        GUI.Label(r2, $"Shots Left: {15 - ShootCount}", style);
     }
     
 }
